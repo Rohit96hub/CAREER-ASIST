@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen-Trailblazers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static_files', filename='css/style.css') }}">
+</head>
+<body class="default-bg">
+
+    <div id="app-container" class="min-h-screen flex flex-col items-center justify-center p-4">
+
+        <!-- Welcome Page -->
+        <div id="welcomePage" class="page active text-center text-white">
+            <h1 class="font-title text-5xl md:text-8xl text-white mb-6">Teen-Trailblazers</h1>
+            <div class="space-x-4">
+                <button id="startBtn" class="btn-primary text-xl py-3 px-10 rounded-full">Start</button>
+                <button id="aboutBtn" class="btn-secondary text-xl py-3 px-10 rounded-full">About Us</button>
+            </div>
+        </div>
+
+        <!-- About Us Page -->
+        <div id="aboutPage" class="page glassmorphism p-6 md:p-8 rounded-xl max-w-4xl text-left">
+            <h2 class="text-3xl font-bold mb-4 text-center text-[#f0c419]">Teen Trailblazers</h2>
+            <p class="text-lg text-center text-gray-300 mb-6">Explore Possibilities, Ignite Passions.</p>
+            <div class="about-content-area">
+                <div class="about-section">
+                    <h3>Genre and Objective</h3>
+                    <p>Teen Trailblazer is an educational simulation game designed to empower teenagers aged 14 to 18 to explore various career paths and ignite their passions. Through engaging scenarios, players can discover their interests and potential, aiding informed decisions about their futures.</p>
+                </div>
+                <div class="about-section">
+                    <h3>Narrative and Gameplay</h3>
+                    <p>In 'Teen Trailblazer,' players embark on a journey of self-discovery... Each selection provides an overview of the role, highlighting its benefits and challenges.</p>
+                    <p>As players progress, they encounter quests tailored to their chosen career... The outcomes of these decisions shape the player's journey, offering a dynamic and engaging experience that encourages exploration and self-reflection.</p>
+                </div>
+                <div class="about-section">
+                    <h3>Development Team</h3>
+                    <p>'Teen Trailblazer' was conceptualized by <a href="https://www.linkedin.com/in/neependra/" target="_blank" class="text-yellow-400 hover:underline">Neependra Khare</a>, Founder and CEO of CloudYuga, and developed in collaboration with <a href="https://www.linkedin.com/in/rohitsinha96/" target="_blank" class="text-yellow-400 hover:underline">Rohit Sinha</a>, Intern at CloudYuga...</p>
+                </div>
+                <div class="about-section">
+                    <h3>Contact Us</h3>
+                    <p>For any queries, feedback, or suggestions, please reach out to <a href="mailto:neependra.khare@gmail.com" class="text-yellow-400 hover:underline">neependra.khare@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button id="aboutBackBtn" class="btn-primary font-bold py-2 px-6 rounded-full text-lg">Back Home</button>
+            </div>
+        </div>
+
+        <!-- Name & Gender Page -->
+        <div id="nameGenderPage" class="page text-center">
+            <form id="welcomeForm" class="glassmorphism p-8 rounded-xl max-w-md mx-auto">
+                <div class="mb-6">
+                    <label for="userName" class="block mb-2 text-lg font-bold text-white">What's your name, trailblazer?</label>
+                    <input type="text" id="userName" name="userName" class="input-field" placeholder="e.g., Alex" required>
+                </div>
+                <div class="mb-8">
+                    <label class="block mb-2 text-lg font-bold text-white">Choose your adventurer avatar:</label>
+                    <div class="flex justify-center gap-4">
+                        <label class="gender-card">
+                            <input type="radio" name="gender" value="male" class="hidden" required>
+                            <img src="/static/images/student_male.png" alt="Male Avatar" class="rounded-lg">
+                        </label>
+                        <label class="gender-card">
+                            <input type="radio" name="gender" value="female" class="hidden">
+                            <img src="/static/images/student_female.png" alt="Female Avatar" class="rounded-lg">
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary font-bold py-3 px-8 rounded-full text-lg w-full">Continue</button>
+            </form>
+        </div>
+
+        <!-- Career Selection Page (Spinner First) -->
+        <div id="careerSelectPage" class="page flex-col items-center w-full max-w-4xl">
+            <h2 id="welcomeUserText" class="text-3xl font-bold mb-4 text-white"></h2>
+            <p class="text-lg text-gray-300 mb-8">Spin the reel to discover your path!</p>
+            <div class="slot-machine">
+                <div class="reel"></div><div class="reel"></div><div class="reel"></div>
+            </div>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 items-center">
+                <button id="spinButton" class="btn-primary font-bold py-4 px-10 rounded-full text-xl">SPIN</button>
+                <button id="manualChoiceBtn" class="btn-secondary font-bold py-2 px-6 rounded-full">Or Choose Manually</button>
+            </div>
+        </div>
+        
+        <!-- This is a container for all full-screen narrative pages -->
+        <div id="narrativePage" class="page w-full h-full fixed top-0 left-0">
+            <div class="narrative-bg-image"></div>
+            <div class="narrative-content-container">
+                <div class="narrative-content-box">
+                    <!-- Content for Intro, Choice, Scenarios will be injected here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Result Page -->
+        <div id="finalResultPage" class="page">
+             <div class="narrative-bg-image"></div>
+             <div id="resultBox" class="narrative-content-box text-center">
+                <!-- Final result content injected here -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal for Manual Career Selection -->
+    <div id="manualChoiceModal" class="modal-overlay">
+        <div id="manualChoiceContent" class="modal-content"></div>
+    </div>
+
+    <!-- Data passed from Flask to JavaScript -->
+    <script>
+        const CAREERS_DATA = {{ careers_data | tojson }};
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <script src="{{ url_for('static_files', filename='js/main.js') }}"></script>
+</body>
+</html>

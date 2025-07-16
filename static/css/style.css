@@ -1,0 +1,124 @@
+/* career-finder/static/css/style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background-image 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.welcome-bg, .default-bg {
+    background-color: #1a1a2e;
+}
+.font-title {
+    font-family: 'Bungee', cursive;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.2), 6px 6px 0px rgba(0,0,0,0.1);
+}
+.glassmorphism {
+    background: rgba(28, 28, 48, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.page {
+    display: none;
+    width: 100%;
+    animation: fadeIn 0.6s ease-in-out;
+}
+.page.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.btn-primary {
+    background: linear-gradient(45deg, #f0c419, #ff7e5f);
+    color: #1a1a2e;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.4);
+}
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #f0c419;
+    color: #f0c419;
+    transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: #f0c419;
+    color: #1a1a2e;
+    transform: translateY(-3px);
+}
+.input-field {
+    width: 100%; padding: 0.75rem; border-radius: 0.5rem; background-color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2); color: white; transition: all 0.3s ease;
+}
+.input-field:focus { outline: none; border-color: #f0c419; box-shadow: 0 0 15px rgba(240, 196, 25, 0.5); }
+.gender-card { cursor: pointer; border: 3px solid transparent; border-radius: 12px; transition: all 0.3s ease; padding: 8px; }
+.gender-card img { transition: transform 0.3s ease; width: 100px; height: 100px; }
+.gender-card:hover img { transform: scale(1.05); }
+input[type="radio"]:checked + img { border-color: #f0c419; box-shadow: 0 0 20px rgba(240, 196, 25, 0.5); }
+.about-content-area { max-height: 60vh; overflow-y: auto; padding-right: 1rem; }
+.about-section h3 { font-size: 1.5rem; font-weight: bold; color: #f0c419; margin-top: 1.5rem; margin-bottom: 0.75rem; padding-bottom: 0.5rem; }
+.about-section p, .about-section li { color: #d1d5db; margin-bottom: 0.5rem; }
+.slot-machine { display: flex; justify-content: center; gap: 1rem; padding: 2rem 0; }
+.reel { width: 120px; height: 120px; overflow: hidden; border: 4px solid #f0c419; border-radius: 1rem; background: rgba(0,0,0,0.3); box-shadow: inset 0 0 15px rgba(0,0,0,0.5); }
+.reel-inner { transition: transform 2.5s cubic-bezier(0.25, 1, 0.5, 1); }
+.reel-item { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 4rem; flex-shrink: 0; }
+@keyframes spin-vertical { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+.is-spinning .reel-inner { transition: none; animation: spin-vertical 0.5s linear infinite; }
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 1000; animation: fadeIn 0.3s; }
+.modal-overlay.visible { display: flex; }
+.modal-content { background: #1e1e3f; padding: 2rem; border-radius: 1rem; width: 90%; max-width: 800px; max-height: 90vh; overflow-y: auto; }
+.manual-career-card { background: rgba(43, 43, 78, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer; }
+.manual-career-card:hover { transform: translateY(-5px); background: rgba(53, 53, 88, 0.9); border-color: #f0c419; }
+
+/* --- New Narrative Page Styles --- */
+#narrativePage, #finalResultPage {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    display: none; align-items: stretch; justify-content: stretch;
+}
+.narrative-bg-image {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover; background-position: center; transition: background-image 0.5s ease-in-out; z-index: 1;
+}
+.narrative-content-container {
+    position: relative; z-index: 2; color: white; width: 100%; height: 100%;
+    display: flex; flex-direction: column; padding: 1rem;
+}
+.narrative-content-box {
+    background: rgba(10, 10, 20, 0.8); backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); border-top: 2px solid #f0c419;
+    padding: 1.5rem; border-radius: 1rem; animation: slideUp 0.5s ease-out;
+}
+/* Portrait (Mobile) Layout */
+@media (orientation: portrait) {
+    .narrative-content-container { justify-content: flex-start; }
+    #narrativePage .narrative-bg-image { height: 40vh; position: relative; z-index: 1; border-radius: 1rem; }
+    #narrativePage .narrative-content-container { height: 60vh; justify-content: flex-start; background-color: #1a1a2e; padding: 1.5rem; }
+    .narrative-content-box { border-top: none; border-radius: 0; background: transparent; backdrop-filter: none; padding: 0; }
+}
+/* Landscape (PC) Layout */
+@media (orientation: landscape) {
+    .narrative-content-container { justify-content: flex-end; align-items: center; }
+    .narrative-content-box { width: 100%; max-width: 900px; border-radius: 1rem 1rem 0 0; }
+}
+@keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.narrative-content-box h3 { font-size: 1.75rem; font-weight: bold; color: #f0c419; margin-bottom: 0.75rem; }
+.narrative-content-box h4 { font-size: 1.25rem; font-weight: bold; color: white; margin-top: 1rem; margin-bottom: 0.5rem; }
+.narrative-content-box p, .narrative-content-box li { color: #e5e7eb; font-size: 1.1rem; }
+.narrative-content-box ul { list-style: disc; list-style-position: inside; margin-left: 1rem; }
+.decision-card { background-color: #3a3a5a; padding: 1.5rem; border-radius: 12px; border: 2px solid #5a5a7a; cursor: pointer; transition: all 0.2s ease-in-out; height: 100%; }
+.decision-card:hover { border-color: #f0c419; background-color: #4a4a6a; transform: translateY(-5px); }
+/* Final Result Page Specifics */
+#finalResultPage .narrative-content-container { justify-content: center; align-items: center; }
+#resultBox {
+    background: rgba(10, 10, 20, 0.8); backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); border: 2px solid #f0c419;
+    padding: 2rem; border-radius: 1rem; width: 100%; max-width: 700px;
+    animation: fadeIn 1s ease-in-out 0.5s; animation-fill-mode: backwards;
+}
