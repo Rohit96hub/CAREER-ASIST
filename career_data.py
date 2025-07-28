@@ -26,13 +26,22 @@ CAREERS = {
             }
         },
         "Images": {
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/doctor/overview.png",
+            "Benefits": "/static/images/doctor/benefits.png",
+            "Impact": "/static/images/doctor/impact.png",
+            "InitialChoice": "/static/images/doctor/choice.png",
+            "Scenario1": "/static/images/doctor/scenario1.png",
+            "Scenario2": "/static/images/doctor/scenario2.png",
+            "Result": "/static/images/doctor/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/doctor/overview.mp3",
+            "Benefits": "/static/audio/doctor/benefits.mp3",
+            "Impact": "/static/audio/doctor/impact.mp3",
+            "InitialChoice": "/static/audio/doctor/initial_choice.mp3",
+            "Scenario1": "/static/audio/doctor/scenario1.mp3",
+            "Scenario2": "/static/audio/doctor/scenario2.mp3",
+            "Result": "/static/audio/doctor/result.mp3"
         },
         "InitialChoice": {
             "Question": "How will you begin your journey as a Doctor?",
@@ -116,13 +125,22 @@ CAREERS = {
             }
         },
         "Images": {
-            "Overview": "/static/images/ias_overview.png",
-            "Benefits": "/static/images/ias_benefits.png",
-            "Impact": "/static/images/ias_impact.png",
-            "InitialChoice": "/static/images/ias_choice.png",
-            "Scenario1": "/static/images/ias_scenario1.png",
-            "Scenario2": "/static/images/ias_scenario2.png",
-            "Result": "/static/images/ias_result.png"
+            "Overview": "/static/images/ias/overview.png",
+            "Benefits": "/static/images/ias/benefits.png",
+            "Impact": "/static/images/ias/impact.png",
+            "InitialChoice": "/static/images/ias/choice.png",
+            "Scenario1": "/static/images/ias/scenario1.png",
+            "Scenario2": "/static/images/ias/scenario2.png",
+            "Result": "/static/images/ias/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/ias/overview.mp3",
+            "Benefits": "/static/audio/ias/benefits.mp3",
+            "Impact": "/static/audio/ias/impact.mp3",
+            "InitialChoice": "/static/audio/ias/initial_choice.mp3",
+            "Scenario1": "/static/audio/ias/scenario1.mp3",
+            "Scenario2": "/static/audio/ias/scenario2.mp3",
+            "Result": "/static/audio/ias/result.mp3"
         },
         "InitialChoice": {
             "Question": "What will be your administrative philosophy?",
@@ -206,13 +224,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/ips/overview.png",
+            "Benefits": "/static/images/ips/benefits.png",
+            "Impact": "/static/images/ips/impact.png",
+            "InitialChoice": "/static/images/ips/choice.png",
+            "Scenario1": "/static/images/ips/scenario1.png",
+            "Scenario2": "/static/images/ips/scenario2.png",
+            "Result": "/static/images/ips/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/ips/overview.mp3",
+            "Benefits": "/static/audio/ips/benefits.mp3",
+            "Impact": "/static/audio/ips/impact.mp3",
+            "InitialChoice": "/static/audio/ips/initial_choice.mp3",
+            "Scenario1": "/static/audio/ips/scenario1.mp3",
+            "Scenario2": "/static/audio/ips/cenario2.mp3",
+            "Result": "/static/audio/ips/result.mp3"
         },
         "InitialChoice": {
             "Question": "What defines your policing approach?",
@@ -296,13 +323,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/teacher/overview.png",
+            "Benefits": "/static/images/teacher/benefits.png",
+            "Impact": "/static/images/teacher/impact.png",
+            "InitialChoice": "/static/images/teacher/choice.png",
+            "Scenario1": "/static/images/teacher/scenario1.png",
+            "Scenario2": "/static/images/teacher/scenario2.png",
+            "Result": "/static/images/teacher/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/teacher/overview.mp3",
+            "Benefits": "/static/audio/teacher/benefits.mp3",
+            "Impact": "/static/audio/teacher/impact.mp3",
+            "InitialChoice": "/static/audio/teacher/initial_choice.mp3",
+            "Scenario1": "/static/audio/teacher/scenario1.mp3",
+            "Scenario2": "/static/audio/teacher/scenario2.mp3",
+            "Result": "/static/audio/teacher/result.mp3"
         },
         "InitialChoice": {
             "Question": "What's your core teaching philosophy?",
@@ -386,13 +422,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/cybersecurity/overview.png",
+            "Benefits": "/static/images/cybersecurity/benefits.png",
+            "Impact": "/static/images/cybersecurity/impact.png",
+            "InitialChoice": "/static/images/cybersecurity/choice.png",
+            "Scenario1": "/static/images/cybersecurity/scenario1.png",
+            "Scenario2": "/static/images/cybersecurity/scenario2.png",
+            "Result": "/static/images/cybersecurity/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/cybersecurity/overview.mp3",
+            "Benefits": "/static/audio/cybersecurity/benefits.mp3",
+            "Impact": "/static/audio/cybersecurity/impact.mp3",
+            "InitialChoice": "/static/audio/cybersecurity/initial_choice.mp3",
+            "Scenario1": "/static/audio/cybersecurity/scenario1.mp3",
+            "Scenario2": "/static/audio/cybersecurity/scenario2.mp3",
+            "Result": "/static/audio/cybersecurity/result.mp3"
         },
         "InitialChoice": {
             "Question": "How do you approach digital defense?",
@@ -476,13 +521,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/data/overview.png",
+            "Benefits": "/static/images/data/benefits.png",
+            "Impact": "/static/images/data/impact.png",
+            "InitialChoice": "/static/images/data/choice.png",
+            "Scenario1": "/static/images/data/scenario1.png",
+            "Scenario2": "/static/images/data/scenario2.png",
+            "Result": "/static/images/data/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/data/overview.mp3",
+            "Benefits": "/static/audio/data/benefits.mp3",
+            "Impact": "/static/audio/data/impact.mp3",
+            "InitialChoice": "/static/audio/data/initial_choice.mp3",
+            "Scenario1": "/static/audio/data/scenario1.mp3",
+            "Scenario2": "/static/audio/data/scenario2.mp3",
+            "Result": "/static/audio/data/result.mp3"
         },
         "InitialChoice": {
             "Question": "How do you derive meaning from data?",
@@ -566,13 +620,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/ai/overview.png",
+            "Benefits": "/static/images/ai/benefits.png",
+            "Impact": "/static/images/ai/impact.png",
+            "InitialChoice": "/static/images/ai/choice.png",
+            "Scenario1": "/static/images/ai/scenario1.png",
+            "Scenario2": "/static/images/ai/scenario2.png",
+            "Result": "/static/images/ai/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/ai/overview.mp3",
+            "Benefits": "/static/audio/ai/benefits.mp3",
+            "Impact": "/static/audio/ai/impact.mp3",
+            "InitialChoice": "/static/audio/ai/initial_choice.mp3",
+            "Scenario1": "/static/audio/ai/scenario1.mp3",
+            "Scenario2": "/static/audio/ai/scenario2.mp3",
+            "Result": "/static/audio/ai/result.mp3"
         },
         "InitialChoice": {
             "Question": "How will you shape AI development?",
@@ -656,13 +719,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/ux/overview.png",
+            "Benefits": "/static/images/ux/benefits.png",
+            "Impact": "/static/images/ux//ux/impact.png",
+            "InitialChoice": "/static/images/ux/choice.png",
+            "Scenario1": "/static/images/ux/scenario1.png",
+            "Scenario2": "/static/images/ux/scenario2.png",
+            "Result": "/static/images/ux/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/ux/overview.mp3",
+            "Benefits": "/static/audio/ux/benefits.mp3",
+            "Impact": "/static/audio/ux/impact.mp3",
+            "InitialChoice": "/static/audio/ux/initial_choice.mp3",
+            "Scenario1": "/static/audio/ux/scenario1.mp3",
+            "Scenario2": "/static/audio/ux/scenario2.mp3",
+            "Result": "/static/audio/ux/result.mp3"
         },
         "InitialChoice": {
             "Question": "What drives your design philosophy?",
@@ -746,13 +818,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/se/overview.png",
+            "Benefits": "/static/images/se/benefits.png",
+            "Impact": "/static/images/se/impact.png",
+            "InitialChoice": "/static/images/se/choice.png",
+            "Scenario1": "/static/images/se/scenario1.png",
+            "Scenario2": "/static/images/se/scenario2.png",
+            "Result": "/static/images/se/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/se/overview.mp3",
+            "Benefits": "/static/audio/se/benefits.mp3",
+            "Impact": "/static/audio/se/impact.mp3",
+            "InitialChoice": "/static/audio/se/initial_choice.mp3",
+            "Scenario1": "/static/audio/se/scenario1.mp3",
+            "Scenario2": "/static/audio/se/scenario2.mp3",
+            "Result": "/static/audio/se/result.mp3"
         },
         "InitialChoice": {
             "Question": "What's your engineering ethos?",
@@ -836,13 +917,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/web/overview.png",
+            "Benefits": "/static/images/web/benefits.png",
+            "Impact": "/static/images/web/impact.png",
+            "InitialChoice": "/static/images/web/choice.png",
+            "Scenario1": "/static/images/web/scenario1.png",
+            "Scenario2": "/static/images/web/scenario2.png",
+            "Result": "/static/images/web/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/web/overview.mp3",
+            "Benefits": "/static/audio/web/benefits.mp3",
+            "Impact": "/static/audio/web/impact.mp3",
+            "InitialChoice": "/static/audio/web/initial_choice.mp3",
+            "Scenario1": "/static/audio/web/scenario1.mp3",
+            "Scenario2": "/static/audio/web/scenario2.mp3",
+            "Result": "/static/audio/web/result.mp3"
         },
         "InitialChoice": {
             "Question": "How do you approach web creation?",
@@ -926,13 +1016,22 @@ CAREERS = {
             }
         },
         "Images": { 
-            "Overview": "/static/images/doctor_overview.png",
-            "Benefits": "/static/images/doctor_benefits.png",
-            "Impact": "/static/images/doctor_impact.png",
-            "InitialChoice": "/static/images/doctor_choice.png",
-            "Scenario1": "/static/images/doctor_scenario1.png",
-            "Scenario2": "/static/images/doctor_scenario2.png",
-            "Result": "/static/images/doctor_result.png"
+            "Overview": "/static/images/nurse/overview.png",
+            "Benefits": "/static/images/nurse/benefits.png",
+            "Impact": "/static/images/nurse/impact.png",
+            "InitialChoice": "/static/images/nurse/choice.png",
+            "Scenario1": "/static/images/nurse/scenario1.png",
+            "Scenario2": "/static/images/nurse/scenario2.png",
+            "Result": "/static/images/nurse/result.png"
+        },
+        "Audio": {
+            "Overview": "/static/audio/nurse/overview.mp3",
+            "Benefits": "/static/audio/nurse/benefits.mp3",
+            "Impact": "/static/audio/nurse/impact.mp3",
+            "InitialChoice": "/static/audio/nurse/initial_choice.mp3",
+            "Scenario1": "/static/audio/nurse/scenario1.mp3",
+            "Scenario2": "/static/audio/nurse/scenario2.mp3",
+            "Result": "/static/audio/nurse/result.mp3"
         },
         "InitialChoice": {
             "Question": "What defines your nursing approach?",

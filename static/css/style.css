@@ -73,7 +73,7 @@ input[type="radio"]:checked + img { border-color: #f0c419; box-shadow: 0 0 20px 
 .is-spinning .reel-inner { transition: none; animation: spin-vertical 0.5s linear infinite; }
 .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 1000; animation: fadeIn 0.3s; }
 .modal-overlay.visible { display: flex; }
-.modal-content { background: #1e1e3f; padding: 2rem; border-radius: 1rem; width: 90%; max-width: 800px; max-height: 90vh; overflow-y: auto; }
+.modal-content { background: #1e1e3f; padding: 2rem; border-radius: 1rem; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
 .manual-career-card { background: rgba(43, 43, 78, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer; }
 .manual-career-card:hover { transform: translateY(-5px); background: rgba(53, 53, 88, 0.9); border-color: #f0c419; }
 
@@ -115,10 +115,54 @@ input[type="radio"]:checked + img { border-color: #f0c419; box-shadow: 0 0 20px 
 .decision-card { background-color: #3a3a5a; padding: 1.5rem; border-radius: 12px; border: 2px solid #5a5a7a; cursor: pointer; transition: all 0.2s ease-in-out; height: 100%; }
 .decision-card:hover { border-color: #f0c419; background-color: #4a4a6a; transform: translateY(-5px); }
 /* Final Result Page Specifics */
-#finalResultPage .narrative-content-container { justify-content: center; align-items: center; }
+#finalResultPage .narrative-content-container { 
+    justify-content: center; 
+    align-items: center; 
+    background: rgba(10, 10, 20, 0.5); /* Semi-transparent overlay for better text visibility */
+}
 #resultBox {
-    background: rgba(10, 10, 20, 0.8); backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); border: 2px solid #f0c419;
-    padding: 2rem; border-radius: 1rem; width: 100%; max-width: 700px;
-    animation: fadeIn 1s ease-in-out 0.5s; animation-fill-mode: backwards;
+    background: rgba(10, 10, 20, 0.9); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 2px solid #f0c419;
+    padding: 2rem; 
+    border-radius: 1rem; 
+    width: 90%; 
+    max-width: 700px;
+    animation: fadeIn 1s ease-in-out 0.5s; 
+    animation-fill-mode: backwards;
+    z-index: 10;
+    position: relative;
+}
+
+/* Spin Button Styles */
+.spin-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.spin-button {
+    width: 166px;
+    height: 88px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.spin-button:hover {
+    transform: scale(1.05);
+}
+.spin-button:active {
+    transform: scale(0.95);
+
+/* Career Congrats Modal */
+#careerCongratsModal .modal-content {
+    text-align: center;
+    padding: 2.5rem;
+}
+#careerCongratsModal h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#careerCongratsModal p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
 }

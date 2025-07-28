@@ -82,9 +82,11 @@
             <div class="slot-machine">
                 <div class="reel"></div><div class="reel"></div><div class="reel"></div>
             </div>
-            <div class="mt-8 flex flex-col sm:flex-row gap-4 items-center">
-                <button id="spinButton" class="btn-primary font-bold py-4 px-10 rounded-full text-xl">SPIN</button>
-                <button id="manualChoiceBtn" class="btn-secondary font-bold py-2 px-6 rounded-full">Or Choose Manually</button>
+            <div class="mt-8 flex flex-col items-center">
+                <div class="spin-button-container">
+                    <img id="spinButton" src="/static/images/spin_normal.png" alt="Spin Button" class="spin-button">
+                </div>
+                <button id="manualChoiceBtn" class="btn-secondary font-bold py-2 px-6 rounded-full mt-6">Or Choose Manually</button>
             </div>
         </div>
         
@@ -103,6 +105,18 @@
              <div class="narrative-bg-image"></div>
              <div id="resultBox" class="narrative-content-box text-center">
                 <!-- Final result content injected here -->
+            </div>
+        </div>
+        
+        <!-- Career Congratulation Modal -->
+        <div id="careerCongratsModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="text-center">
+                    <h3 id="congratsTitle" class="text-3xl font-bold mb-4 text-[#f0c419]">Congratulations!</h3>
+                    <p id="congratsMessage" class="text-xl mb-6">You've chosen to become a <span class="font-bold" id="careerNameSpan"></span>!</p>
+                    <img id="congratsAvatar" src="" alt="Career Avatar" class="w-32 h-32 rounded-full mx-auto mb-6">
+                    <button id="congratsContinueBtn" class="btn-primary font-bold py-3 px-8 rounded-full text-lg">Begin Journey</button>
+                </div>
             </div>
         </div>
 

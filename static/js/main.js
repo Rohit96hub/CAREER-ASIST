@@ -18,10 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutBackBtn = document.getElementById('aboutBackBtn');
     const welcomeUserText = document.getElementById('welcomeUserText');
     const manualChoiceBtn = document.getElementById('manualChoiceBtn');
+    const spinButton = document.getElementById('spinButton');
     
     // Modals
     const manualChoiceModal = document.getElementById('manualChoiceModal');
     const manualChoiceContent = document.getElementById('manualChoiceContent');
+    const careerCongratsModal = document.getElementById('careerCongratsModal');
+    const congratsContinueBtn = document.getElementById('congratsContinueBtn');
     
     // Narrative Pages & Content
     const narrativePage = document.getElementById('narrativePage');
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof Tone !== 'undefined') {
             masterVolume = new Tone.Volume(-12).toDestination(); // Approx 40% volume
             selectSound = new Tone.Synth({ oscillator: { type: 'sine' }, envelope: { attack: 0.01, decay: 0.2, sustain: 0.1, release: 0.1 } }).connect(masterVolume);
-            spinStartSound = new Tone.NoiseSynth({ noise: { type: 'pink' }, envelope: { attack: 0.01, decay: 1.5, sustain: 0.1 } }).connect(masterVolume);
+            //spinStartSound = new Tone.NoiseSynth({ noise: { type: 'pink' }, envelope: { attack: 0.01, decay: 1.5, sustain: 0.1 } }).connect(masterVolume);
             reelStopSound = new Tone.MembraneSynth({ pitchDecay: 0.02, octaves: 4, oscillator: { type: 'sine' } }).connect(masterVolume);
             successSound = new Tone.Synth({ oscillator: { type: 'triangle' }, envelope: { attack: 0.01, decay: 0.3, sustain: 0.1, release: 0.2 } }).connect(masterVolume);
         }
@@ -79,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- EVENT LISTENERS ---
     startBtn.addEventListener('click', () => { 
         playSound(selectSound, "C4", "8n"); 
-        showPage('nameGenderPage'); 
+        showPage('nameGenderPage');  // FIXED: Changed from 'welcomePage' to 'nameGenderPage'
     });
     
     aboutBtn.addEventListener('click', () => { 
@@ -105,6 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     manualChoiceBtn.addEventListener('click', showManualChoice);
+    
+    // Career congrats modal
+    congratsContinueBtn.addEventListener('click', () => {
+        careerCongratsModal.classList.remove('visible');
+        user.careerIntroStep = 0;
+        renderNarrativeStep();
+        showPage('narrativePage');
+    });
 
     // --- CAREER SELECTION (MANUAL) ---
     function showManualChoice() {
@@ -148,13 +159,26 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        user.careerIntroStep = 0;
+        // Hide any open modals
         manualChoiceModal.classList.remove('visible');
-        playSound(selectSound, "C5", "8n");
-        renderNarrativeStep();
-        showPage('narrativePage');
+        
+        // Show congrats modal
+        showCareerCongrats(careerName);
     }
     
+    function showCareerCongrats(careerName) {
+        const career = user.career.CareerCard;
+        const avatarSrc = user.gender === 'male' ? career.AvatarMale : career.AvatarFemale;
+        
+        document.getElementById('careerNameSpan').textContent = careerName;
+        document.getElementById('congratsAvatar').src = avatarSrc;
+        document.getElementById('congratsTitle').textContent = `Congratulations, ${user.name}!`;
+        document.getElementById('congratsMessage').innerHTML = `You've chosen to become a <span class="font-bold">${careerName}</span>!`;
+        
+        playSound(successSound, "C6", "0.5");
+        careerCongratsModal.classList.add('visible');
+    }
+
     // --- NARRATIVE ENGINE ---
     function renderNarrativeStep() {
         playSound(selectSound, "E5", "8n");
@@ -342,16 +366,16 @@ document.addEventListener('DOMContentLoaded', () => {
             reel.appendChild(reelInner);
         });
         
-        document.getElementById('spinButton').addEventListener('click', runSpinner);
+        spinButton.addEventListener('click', runSpinner);
     }
     
     function runSpinner() {
         if (isSpinning) return;
         isSpinning = true;
         
-        const spinButton = document.getElementById('spinButton');
-        spinButton.disabled = true;
-        spinButton.textContent = 'SPINNING...';
+        // Change spin button to active state
+        spinButton.src = "/static/images/spin_active.png";
+        spinButton.classList.add('spinning');
         playSound(spinStartSound);
         
         // Get random career
@@ -377,9 +401,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (index === reelElements.length - 1) {
                     // Release sound and finish spin
                     setTimeout(() => {
-                        spinButton.disabled = false;
-                        spinButton.textContent = 'SPIN';
                         isSpinning = false;
+                        spinButton.src = "/static/images/spin_normal.png";
+                        spinButton.classList.remove('spinning');
                         
                         // Start career journey with result
                         startCareerJourney(resultCareerName);
